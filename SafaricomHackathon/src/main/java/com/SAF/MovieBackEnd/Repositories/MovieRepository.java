@@ -6,6 +6,8 @@
 package com.SAF.MovieBackEnd.Repositories;
 
 import com.SAF.MovieBackEnd.Models.Movies;
+import java.util.List;
+import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
@@ -14,5 +16,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  */
 public interface MovieRepository extends JpaRepository<Movies, Integer> 
 {
+    public List<Movies> findByWatched(Boolean Watched);
     
 }
