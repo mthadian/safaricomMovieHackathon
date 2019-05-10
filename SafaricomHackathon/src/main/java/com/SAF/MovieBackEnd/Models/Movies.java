@@ -7,6 +7,7 @@ package com.SAF.MovieBackEnd.Models;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.validation.constraints.Size;
 
 /**
  *
@@ -19,6 +20,8 @@ public class Movies
     @Id
     private int movieId;
     private String title;
+    
+    @Size(min = 1, max = 200)
     private String description;
     private int rating;
     private String recommendation;
